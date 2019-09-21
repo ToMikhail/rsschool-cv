@@ -1,0 +1,44 @@
+body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif; 
+}
+
+.container { 
+    max-width: 1024px;
+    margin: 0 auto; 
+}
+
+img {
+    float: right;
+}
+
+h2.name {
+    display: inline-block;
+}
+ 
+li.contacts {
+    width: max-content;
+    min-height: 110px;
+}
+
+li li {
+    list-style-type: square;
+}
+
+.info {
+    display:inline-block;
+    width:max-content;
+}
+
+ul.info-contact {
+    min-width: 350px;
+    width: max-content;
+} 
+
+pre {
+    background-color: rgb(213, 244, 248);
+}
+
+.lnk {
+    display: inline-block;
+}
+
