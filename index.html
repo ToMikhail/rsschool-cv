@@ -3,81 +3,266 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./style.css">
-  <title>cv</title>
+  <link rel="stylesheet" href="css/normolize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>CV</title>
 </head>
 
-<body>
-  <header>
-    <div class="container">
-      <h1 class="name">Toustsik Mikhail</h1>
-      <img src="./img.png" alt="i am" width="100" height="150">
-    </div>
-  </header>
-  <main>
-    <div class="container">
-      <ul>
-        <li class="contacts">
-          <h2>Contacts:</h4>
-            <ul class="info-contact">
-              <li>Phone : <em>+48733607819</em></li>
-              <li>E-mail: <em>toustsikmikhail@gmail.com.</em></li>
-              <li>skype : <em>live:.cid.8c9be7d10d219ae3.</em></li>
+<body class="body">
+  <div class="wrapper">
+    <header class="header">
+      <h1>Mikhail Toustsik - Junior Front-End Developer CV</h1>
+      <div class="container header__container">
+        <div class="wrap flex-wrap header__body">
+          <div class="header__burger">
+            <span></span>
+          </div>
+          <nav class="nav header__menu">
+            <ul class="list header__list flex-wrap flex-wrap-row">
+              <li class="list-item"><a data-goto=".section__2" class="link header__link" href="#">Projects</a></li>
+              <li class="list-item"><a data-goto=".section__3" class="link header__link" href="#">About me</a></li>
+              <li class="list-item"><a data-goto=".section__1" class="link header__link" href="#">Skills</a></li>
+              <li class="list-item"><a data-goto=".section__4" class="link header__link" href="#">Languages</a></li>
+              <li class="list-item"><a data-goto=".section__5" class="link header__link" href="#">Contacts</a></li>
             </ul>
-        </li>
-        <li>
-          <h2>Summary:</h2>
-          Just started working in this area after 10+ years in the building design engineering.
-          I have experience in working with spread and remote teams. I am self-disciplined and
-          motivated for the education in IT sphere. Want to get front-end development skills with
-          the real cases and challenges.
-        </li>
-        <li>Skills: Java, JS, CSS, HTML, Git, PS Photoshop.</li>
-        <li>
-          <h2>Code examples:</h2>
-          <pre><code>
-                    function showMessage() {
-                alert( 'Всем привет!' );
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="flex-wrap flex-wrap-row inner-main">
+          <div class="flex-wrap flex-wrap-col left-side">
+            <div class="img__wrap">
+              <img class="img__ava" src="./assets/img/IMG_20171020.jpg" alt="ava">
+            </div>
+            <section class="section profile">
+              <h3 class="title">profile</h3>
+              <p class="text">
+                Just started working in this area after 10+ years in the building design engineering. I have experience
+                in
+                working with spread and remote teams. I am self-disciplined and motivated for the education in IT
+                sphere.
+                Want to get front-end development skills with the real cases and challenges.
+              </p>
+            </section>
+
+            <section id="contacts" class="section section__5 contact flex-wrap flex-wrap-col">
+              <h3 class="title">contact</h3>
+              <ul class="list text">
+                <li class="list-item">phone: <a class="link link-contact" href="tel:+48730819607">+48 730 607 819</a>
+                </li>
+                <li class="list-item">mail: <a class="link link-contact"
+                    href="mailto:toustsikmikhail@gmail.com">toustsikmikhail@gmail.com</a></li>
+                <li class="list-item">skype: <a class="link link-contact"
+                    href="skype:.cid.8c9be7d10d219ae3?chat">.cid.8c9be7d10d219ae3</a></li>
+                <li class="list-item">github: <a class="link link-contact"
+                    href="https://github.com/ToMikhail">github.com/ToMikhail</a></li>
+                <li class="list-item">location: <a class="link link-contact"
+                    href="https://www.google.com/maps/place/Krak%C3%B3w/@50.0464284,19.7246942,10z/data=!3m1!4b1!4m5!3m4!1s0x471644c0354e18d1:0xb46bb6b576478abf!8m2!3d50.0646501!4d19.9449799">Krakow,
+                    Poland</a></li>
+              </ul>
+              <button class="btn btn-download">
+                <a class="link link-download" href="./assets/content/pdf/CV-Toustsik_Mikhail_FE-Dev_Jun.pdf"
+                  download>Download CV</a>
+              </button>
+            </section>
+          </div>
+          <div class="right-side flex-wrap flex-wrap-col">
+            <section class="section name">
+              <h2 class="primary-title">Mikhail Toustsik</h2>
+              <p class="subtitle">Junior Front-End Developer</p>
+            </section>
+            <section id="skills" class="section section__1 skills">
+              <h3 class="title">Technical Skills</h3>
+              <ul class="list grid-wrap">
+                <li class="list-item">HTML</li>
+                <li class="list-item">CSS/SCSS</li>
+                <li class="list-item">JavaScript</li>
+                <li class="list-item">Bootstrap</li>
+                <li class="list-item">GIT/HitHub</li>
+                <li class="list-item">Bash</li>
+                <li class="list-item">Figma</li>
+                <li class="list-item">Agile</li>
+              </ul>
+            </section>
+            <section id="code-style" class="section section__">
+              <h3 class="title">Code style</h3>
+              <pre class="hljs">
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">changeImage</span>(<span class="hljs-params">event</span>)</span>{
+                  <span class="hljs-keyword">if</span> (event.target.classList.contains(<span class="hljs-string">"portfolio-btn"</span>)){
+                    <span class="hljs-keyword">let</span> season = event.target.dataset.season;
+                    portfolioImages.forEach((img, index) =&gt; {
+                    img.src = <span class="hljs-string" style="color: rgb(181, 189, 104);">`./assets/img/<span class="hljs-subst">${season}</span>/<span class="hljs-subst">${index + 1}</span>.jpg`</span>;
+                  });
                 }
-
-                showMessage();
-                showMessage();
-            </code></pre>
-        </li>
-        <li>
-          <h2 class="lnk">Experience:<</h4>
-            <p class="lnk"><a href="https://tomikhail.github.io/rsschool-cv/cv" target="_blank">click a link</a>
-            </p>
-
-        </li>
-        <li>
-          <h2>Education:</h2>
-          <ul>
-            <li>Name of the Education Establishment: Belarusian National Technical University</li>
-            <li>Faculty/College: Civil Engineering</li>
-            <li>Degree (diploma): Master.</li>
-            <li>Course: Computer science - Educational Center of High-Tech Park Belarus.</li>
-            <li>Course: HTML, CSS, JavaScript – Educational Center of High-Tech Park Belarus</li>
-          </ul>
-
-        </li>
-        <li>
-          <h2>Languages:</h2>
-          <ul>
-            <li>English - Intermediate</li>
-            <li>Belarusian - Native</li>
-            <li>Russian - Native</li>
-            <li>Polish - Basic</li>
-          </ul>
-          <!-- I use my english knowledge on a daily basis for reading technical documentation,
-          watching learning videos and
-          listening podcast about Annelids. :) -->
-        </li>
-      </ul>
-    </div>
-  </main>
+              }</pre>
+            </section>
+            <section id="projects" class="section section__2">
+              <h3 class="title">My projects</h3>
+              <div class="flex-wrap flex-wrap-col projects-wrap">
+                <div class="project-item project-item--ttt">
+                  <h3>Tic-Toc-Toe game</h3>
+                  <p class="text text-project">HTML, SCC, JS</p>
+                  <a class="link link-projoct" target="_blank"
+                    href="https://tomikhail.github.io/RSSPRE2022/tic-tac-toe/">See project</a>
+                </div>
+              </div>
+            </section>
+            <section id="about" class="section section__3 expirience">
+              <h3 class="title">experience</h3>
+              <ul class="list list--experience">
+                <li class="list-item list-item--underlined list-item--expereince flex-wrap flex-wrap-row">
+                  <div class="flex-wrap flex-wrap-col col-medium">
+                    <p class="text taxt-date">Oct-2014 – till now</p>
+                    <p class="text organization">Architecture studio “April”</p>
+                  </div>
+                  <div class="flex-wrap flex-wrap-col col-max">
+                    <p class="text text-position">chief designer</p>
+                    <p class="text">Design of the project buildings and constructions. Responsible for design of the
+                      project buildings and constructions, carry out the architectural supervision of the project during
+                      all the </p>
+                  </div>
+                </li>
+                <li class="list-item list-item--underlined list-item--expereince flex-wrap flex-wrap-row">
+                  <div class="flex-wrap flex-wrap-col col-medium">
+                    <p class="text taxt-date">Oct-2012 - Jan-2014</p>
+                    <p class="text organization">Republican Unitary Enterprise “CentreIngEnProekt”</p>
+                  </div>
+                  <div class="flex-wrap flex-wrap-col col-max">
+                    <p class="text text-position">building design engineer</p>
+                    <p class="text">Design of the project buildings and constructions</p>
+                  </div>
+                </li>
+                <li class="list-item list-item--underlined list-item--expereince flex-wrap flex-wrap-row">
+                  <div class="flex-wrap flex-wrap-col col-medium">
+                    <p class="text taxt-date">Jan-2008 -Mar-2012</p>
+                    <p class="text text-organization">Belarusian Scientific Research and Design Republican Unitary
+                      Enterprise “Belenergosetproekt”</p>
+                  </div>
+                  <div class="flex-wrap flex-wrap-col col-max">
+                    <p class="text text-position">building design engineer</p>
+                    <p class="text">Working on design of the project buildings and constructions.</p>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section id="education" class="section edcuation">
+              <h3 class="title">Education and courses</h3>
+              <ul class="list">
+                <li class="list-item list-item--underlined flex-wrap flex-wrap-row ">
+                  <p class="text col-medium">JavaScript/Front-End PreSchool</p>
+                  <p class="text col-max">Rolling Scopes School</p>
+                </li>
+                <li class="list-item list-item--underlined flex-wrap flex-wrap-row ">
+                  <p class="text col-medium">Basics programing</p>
+                  <p class="text col-max">Educational Center of High-Tech Park Belarus</p>
+                </li>
+                <li class="list-item list-item--underlined flex-wrap flex-wrap-row">
+                  <p class="text col-medium">HTML, CSS, JavaScript</p>
+                  <p class="text col-max">Educational Center of High-Tech Park Belarus</p>
+                </li>
+                <li class="list-item flex-wrap flex-wrap-row">
+                  <p class="text col-medium">Civil Engineering</p>
+                  <p class="text col-max">Belarusian National Technical University</p>
+                </li>
+              </ul>
+            </section>
+            <section id="languages" class="section section__4 language">
+              <h3 class="title">Languages</h3>
+              <ul class="list grid-wrap">
+                <li class="list-item">
+                  <p>English</p>
+                  <p>Intermediate</p>
+                </li>
+                <li class="list-item">
+                  <p>Polish</p>
+                  <p>Elementary</p>
+                </li>
+                <li class="list-item">
+                  <p>Belarusian</p>
+                  <p>Native</p>
+                </li>
+                <li class="list-item">
+                  <p>Russian</p>
+                  <p>Native</p>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container container-footer flex-wrap flex-wrap-row">
+        <div class="copiright">
+          <p>© 2022 by Mikha Toustsik</p>
+        </div>
+        <div class="wrap flex-wrap flex-wrap-row">
+          <nav class="nav">
+            <ul class="list flex-wrap flex-wrap-row social-wrap">
+              <li class="list-item social-item">
+                <a class="social-link social-link--ln" href="https://linkedin.com/in/mikhail-toustik-5b69b3153">
+                  <svg fill="#FFF" width="40" height="100%" viewBox="0 0 25 25" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.33605 7.93377C4.99912 7.93384 4.66548 7.86747 4.35423 7.73845C4.04286 7.60938 3.76002 7.42016 3.52189 7.18161C3.28377 6.94306 3.09505 6.65988 2.96654 6.34828C2.83808 6.03679 2.77231 5.70302 2.773 5.36608M5.33605 7.93377C5.84321 7.9341 6.33909 7.78408 6.761 7.50264C7.18295 7.22118 7.51197 6.82093 7.70646 6.35249C7.90095 5.88404 7.95217 5.36845 7.85365 4.8709C7.75512 4.37335 7.51127 3.91619 7.15294 3.55722C6.79461 3.19824 6.33788 2.95358 5.8405 2.85415C5.34313 2.75473 4.82744 2.80501 4.35863 2.99864C3.88983 3.19227 3.48897 3.52055 3.20673 3.94199C2.92453 4.36336 2.77359 4.85894 2.773 5.36608M5.33605 7.93377C5.33599 7.93377 5.33594 7.93377 5.33589 7.93377L5.33625 7.43377L5.33643 7.93377C5.3363 7.93377 5.33618 7.93377 5.33605 7.93377ZM2.773 5.36608C2.773 5.36615 2.773 5.36622 2.773 5.36629L3.273 5.36683L2.773 5.36574C2.773 5.36586 2.773 5.36597 2.773 5.36608ZM20.445 20.9526H20.4945L20.543 20.9429L20.5468 20.9422L20.9487 20.8618V20.4519V14.1633C20.9487 12.6109 20.786 11.1211 20.0874 10.014C19.3555 8.85425 18.1034 8.21023 16.1798 8.21023C14.9488 8.21023 13.9629 8.64325 13.2657 9.23214V8.99897V8.49897H12.7657H9.35175H8.85175V8.99897V20.4519V20.9519H9.35175H12.906H13.406V20.4519V14.7843C13.406 14.045 13.4804 13.4236 13.7162 12.9963C13.8275 12.7945 13.9725 12.6408 14.1667 12.5335C14.3637 12.4246 14.641 12.3474 15.039 12.3474C15.4165 12.3474 15.6556 12.4344 15.8148 12.5452C15.975 12.6567 16.097 12.8221 16.1881 13.0515C16.3819 13.5392 16.3953 14.1967 16.3953 14.8825V20.4526V20.9526H16.8953H20.445ZM7.11675 20.9526H7.61675V20.4526V8.99972V8.49972H7.11675H3.555H3.055V8.99972V20.4526V20.9526H3.555H7.11675ZM1.77 0.5H22.2233C22.9367 0.5 23.5 1.06306 23.5 1.7302V22.2698C23.5 22.9369 22.9367 23.5 22.2233 23.5H1.77C1.05779 23.5 0.5 22.9397 0.5 22.2698V1.7302C0.5 1.06034 1.05779 0.5 1.77 0.5Z">
+                    </path>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-item social-item">
+                <a class="social-link social-link--github" href="https://github.com/ToMikhail">
+                  <svg fill="#FFF" id="github" width="40" height="100%" viewBox="0 0 32 32">
+                    <path clip-rule="evenodd"
+                      d="M16.003,0C7.17,0,0.008,7.162,0.008,15.997  c0,7.067,4.582,13.063,10.94,15.179c0.8,0.146,1.052-0.328,1.052-0.752c0-0.38,0.008-1.442,0-2.777  c-4.449,0.967-5.371-2.107-5.371-2.107c-0.727-1.848-1.775-2.34-1.775-2.34c-1.452-0.992,0.109-0.973,0.109-0.973  c1.605,0.113,2.451,1.649,2.451,1.649c1.427,2.443,3.743,1.737,4.654,1.329c0.146-1.034,0.56-1.739,1.017-2.139  c-3.552-0.404-7.286-1.776-7.286-7.906c0-1.747,0.623-3.174,1.646-4.292C7.28,10.464,6.73,8.837,7.602,6.634  c0,0,1.343-0.43,4.398,1.641c1.276-0.355,2.645-0.532,4.005-0.538c1.359,0.006,2.727,0.183,4.005,0.538  c3.055-2.07,4.396-1.641,4.396-1.641c0.872,2.203,0.323,3.83,0.159,4.234c1.023,1.118,1.644,2.545,1.644,4.292  c0,6.146-3.74,7.498-7.304,7.893C19.479,23.548,20,24.508,20,26c0,2,0,3.902,0,4.428c0,0.428,0.258,0.901,1.07,0.746  C27.422,29.055,32,23.062,32,15.997C32,7.162,24.838,0,16.003,0z"
+                      fill-rule="evenodd"></path>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-item social-item">
+                <a class="social-link social-link--skype" href="skype:.cid.8c9be7d10d219ae3?chat">
+                  <?xml version="1.0" encoding="iso-8859-1"?>
+                  <svg fill="#FFF" id="skype-icon" width="40" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 504 504"
+                    xml:space="preserve">
+                    <path d="M334,265.6c-3.2-7.6-8.8-13.2-16-18c-7.2-4.4-15.6-8.4-25.6-11.6s-21.2-6-33.2-8.4c-9.6-2-16.8-4-20.8-5.2
+                    c-4-1.2-8-2.8-12-4.8c-3.6-2-6.8-4-8.8-6.8c-2-2.4-3.2-5.2-3.2-8.4c0-5.6,3.2-10,9.2-14c6.4-4,15.2-6.4,26-6.4
+                    c11.6,0,20,2,25.2,5.6c5.2,4,9.6,9.6,13.6,16.4c3.2,5.6,6,9.2,8.8,11.6c3.2,2.8,7.2,4,12.8,4c6,0,11.2-2,15.6-6.4
+                    c4-4,6-8.8,6-14.4c0-5.6-1.6-11.2-4.8-16.8c-3.2-5.6-8-11.2-14.4-16c-6.4-5.2-14.8-9.2-24.8-12c-10-3.2-21.6-4.4-35.2-4.4
+                    c-16.8,0-31.6,2.4-44,6.8c-12.8,4.4-22.4,11.2-29.2,20s-10,18.8-10,30c0,11.6,3.2,21.6,9.6,29.6c6.4,8,15.2,14,25.6,18.8
+                    c10.4,4.4,23.6,8.4,39.2,11.6c11.6,2.4,20.8,4.8,27.6,6.8c6.4,2,12,4.8,16,8.8c4,3.6,5.6,8,5.6,14c0,7.2-3.6,13.6-11.2,18.4
+                    c-7.6,5.2-18,7.6-30.4,7.6c-8.8,0-16.4-1.2-21.6-4c-5.2-2.4-9.6-5.6-12.4-9.6c-3.2-4-6-9.2-8.8-15.2c-2.4-5.6-5.2-9.6-8.8-12.8
+                    c-3.6-2.8-8-4.4-13.2-4.4c-6.4,0-11.6,2-15.6,5.6c-4,4-6.4,8.4-6.4,14c0,8.8,3.2,17.6,9.6,26.8c6.4,8.8,14.8,16.4,24.8,21.6
+                    c14,7.2,32,11.2,53.6,11.2c18,0,33.6-2.8,46.8-8c13.2-5.6,23.6-13.2,30.4-22.8s10.4-20.8,10.4-32.8C340,281.6,338,272.8,334,265.6
+                    z" />
+                    <path
+                      d="M377.6,0H126C56.8,0,0,56.8,0,126.4V378c0,69.2,56.8,126,126,126h251.6c69.6,0,126.4-56.8,126.4-126.4V126.4
+                    C504,56.8,447.2,0,377.6,0z M322.4,409.2c-14.8,0-28.8-3.6-41.2-10c-8.8,1.6-18,2.4-27.6,2.4c-82.8,0-150-66.4-150-148
+                    c0-10,1.2-20,3.2-29.6c-7.6-12.8-12-27.6-12-43.2c0-47.2,38.8-85.6,86.8-85.6c16.8,0,32.8,4.8,46.4,13.2c8.4-1.2,16.8-2,25.6-2
+                    c82.8,0,150,66.4,150,148c0,10.8-1.2,21.6-3.6,31.6c5.6,11.6,9.2,24.4,9.2,38C409.2,370.8,370.4,409.2,322.4,409.2z" />
+                  </svg>
+                </a>
+              </li>
+              <li class="list-item social-item">
+                <a class="social-link social-link--mail" href="mailto:toustsikmikhail@gmail.com">
+                  <svg fill="#FFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+                    <path
+                      d="M 5.5 7 C 3.019531 7 1 9.019531 1 11.5 L 1 11.925781 L 25 29 L 49 11.925781 L 49 11.5 C 49 9.019531 46.980469 7 44.5 7 Z M 6.351563 9 L 43.644531 9 L 25 22 Z M 1 14.027344 L 1 38.5 C 1 40.980469 3.019531 43 5.5 43 L 44.5 43 C 46.980469 43 49 40.980469 49 38.5 L 49 14.027344 L 43 18.296875 L 43 41 L 7 41 L 7 18.296875 Z" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./script.js"></script>
+  
 </body>
 
 </html>
