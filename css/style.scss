@@ -176,7 +176,8 @@ a {
 }
 
 .left-side {
-  width: 340px;
+  max-width: 340px;
+  flex-direction: column;
   background: $color-main-dark;
   color: $color-main-light;
 }
@@ -269,6 +270,44 @@ a {
   white-space: nowrap;
   margin-top: 40px;
 }
+
+.link-contact {
+  align-items: center;
+  vertical-align: middle;
+  transition: .3s;
+}
+
+.link-contact:hover {
+  filter: brightness(.6);
+}
+
+.link-contact::before {
+  margin-right: 10px;
+}
+
+.link-contact-phone::before {
+  content: url(../assets/svg/old-phone.svg);
+  width: 50px;
+  height: 50px;
+  
+}
+
+.link-contact-mail::before {
+  content: url(../assets/svg/gmail-icon.svg);
+}
+
+.link-contact-skype::before {
+  content: url(../assets/svg/skype-icon.svg);
+}
+
+.link-contact-github::before {
+  content: url(../assets/svg/github-logo.svg);
+}
+
+.link-contact-location::before {
+  content: url(../assets/svg/map.svg);
+}
+
 .social-item {
   svg {
     transition: 0.3s;
@@ -449,13 +488,11 @@ a {
     overflow-y: scroll;
   }
   .header__burger.active::before {
-    // left: -15px;
     top: 9px;
     transform: rotate(-45deg);
   }
 
   .header__burger.active::after {
-    // left: -15px;
     top: 9px;
     transform: rotate(45deg);
   }
@@ -510,4 +547,44 @@ a {
   }
 }
 
+
+@media (max-width: 1020px) {
+.wrap {
+  margin:0 15px;
+}
+
+  .inner-main {
+      flex-direction: column;
+
+      .left-side {
+        max-width: 100%;
+        padding: 0 50px 0 0 ;
+        flex-direction: row;
+
+        .img__wrap {
+          align-items:flex-start;
+          padding-top: 40px;
+
+          .img__ava {
+            min-width: 200px;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .hidden {
+        display: none;
+      }
+
+     #contacts {
+       position: fixed;
+       top: 50px;
+       right: 0;
+       width: 40px;
+       margin: 0;
+       padding: 10px;
+       background: $color-main-dark;
+     }
+  }
+}
 
